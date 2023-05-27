@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medtracker</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+</head>
+<body>
+<div>
+    <div id="login1">
+
+<div class="loginpage">
+
+<div class="loginframe">
+<h1>User Login</h1>
+<form>
+    <input type="text"  class="input" placeholder="username">
+    <br>
+    <input type="text" class="input" placeholder="password">
+    <br>
+    <button type="submit" class="button">Sign in</button>
+</form>
+</div>
+</div>
+    </div>
+</div>
+
+    <script src="/script.js"></script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medtracker</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div>
+    <div id="login1">
+        <div class="loginpage">
+            <div class="loginframe">
+                <h1>User Login</h1>
+                <form id="loginForm">
+                    <input type="text" class="input" placeholder="username">
+                    <br>
+                    <input type="password" class="input" placeholder="password">
+                    <br>
+                    <button type="submit" class="button">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const passwordInput = document.querySelector('#loginForm input[type="password"]');
+    const password = passwordInput.value;
+
+    // Perform password validation
+    if (password !== 'validpassword') {
+      window.location.href = '/signup'; // Redirect to the signup page
+    } else {
+      // Continue with successful login logic
+      // ...
+    }
+  });
+</script>
+
+</body>
+</html>
